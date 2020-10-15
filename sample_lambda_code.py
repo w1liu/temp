@@ -1,14 +1,12 @@
-#This is a small part of the code-base for my personal project that I'm
-#working on in my free time. What this does is it listens for new file creation
-#in a S3 bucket. Once a new file has been created this lambda function is triggered.
-#The function extracts various features information from a video's transcript 
-#(extracted before-hand), and then it stores the extracted features into a nosql database
-#(AWS DynamoDB in this case).
+#This is a small part of the ETL process for my personal project that I'm
+#working on in my free time. 
+#The function extracts various features from a video's transcript,
+#cleanses it and then stores the extracted features into a nosql database
+#(AWS DynamoDB in this case) for analysis.
 
 #The project is a website that i built to help students to prepare for interviews.
-#It allows a user to answer a prompted interview question,
-#analyzes the interview video and provides feedback based on the user's words,
-#facial expressions, and voice patterns.
+#It allows a user to answer a prompted interview question, analyzes the video and
+#provides feedback based on the user's words, facial expressions, and voice patterns.
 import numpy as np
 import boto3
 import ast
